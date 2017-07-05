@@ -12,7 +12,7 @@ print('''
     |----->         KEYCAPTURE KEYLOGGER\n                     
     |----->          MADE BY KULDIP <3                       
     |----->           IN PYTHON 3 \n                        
-    |----->Pretty! Simple and basic  keylogger for windows.\n
+    |----->Pretty! Simple and basic  keylogger for windows and linux.\n
     |----->             Thanks to:-					   
     |-----> YOUTUBE, THE LEGEND GOOGLE, ALL MY FRIENDS.	   
     |----->         sorry if i forgot someone.		       
