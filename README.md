@@ -10,7 +10,13 @@ To run this program you needs Python 3.1+ to be installed in machine
 and some modules name- Pynput and pyWin32
 
 link of Pynput- https://pypi.python.org/pypi/pynput
-or simpy type pip install pynput in command prompt
+or simpy type "pip install pynput" in terminal
+
+link of smtplib- https://docs.python.org/3/library/smtplib.html
+or simpy type "pip install smtplib" in terminal
+
+link of base64- https://pypi.python.org/pypi/micropython-base64
+or simpy type "pip install base64" in terminal
 
 link of pyWin32- https://sourceforge.net/projects/pywin32/files/pywin32/Build%20221/
 CHOOSE CORRECT VERSION ACCORDING TO YOUR PYTHON VERSION AND PYTHON ARCHITECTURE
