@@ -7,7 +7,7 @@ PLEASE LEAVE A STAR TO BUILD MY SOME CONFIDENCE.
 
 This is a keylogger basically for windows only.
 To run this program you needs Python 3.1+ to be installed in machine
-and some modules name- Pynput and pyWin32
+and some modules name- Pynput, pyWin32, smtplib and base64.
 
 link of Pynput- https://pypi.python.org/pypi/pynput
 or simpy type "pip install pynput" in terminal
