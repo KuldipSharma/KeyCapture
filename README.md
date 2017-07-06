@@ -1,5 +1,5 @@
 # KeyCapture
-Capture Each and Every KeyStrokes on ur Windows :)
+Capture Each and Every KeyStrokes on ur Windows And Linux :)
 
 HELLO THERE I AM NEW TO PROGRAMMING AND I STARTED IT WITH PYTHON3
 ITS AWESOME FOR ME. THIS IS MY FIRST SCRIPT IN MY LIFE
