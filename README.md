@@ -24,6 +24,11 @@ FOR EXAMPLE IF YOU INSTALL PYTHON3.5 64 BIT CHOOSE "pywin32-221.win-amd64-py3.5.
 
 usage:
 		python KeyCapture.py
+		
+		
+THIS SCRIPT WILL SEND YOU THE LOG FILE INTO YOUR EMAIL ACCOUNT
+WHICH WILL YOU GONNA PROVIDE WHILE USING AS SOON AS FILES HAVE
+500 CHARACTERS. (yo can simply changs number of character if u see code)
 
 my facebook id link - www.facebook.com/kuldipknights
 my github page link - www.github.com/KuldipSharma		
