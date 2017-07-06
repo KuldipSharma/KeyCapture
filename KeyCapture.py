@@ -14,13 +14,13 @@ print('''
     |----->          MADE BY KULDIP <3                       
     |----->           IN PYTHON 3 \n                        
 
-    |----->Pretty! Simple and basic  keylogger for windows and Linux.\n
-    |----->             Thanks to:-					
-    |----->    Techwebspot for contribution in our script
+    |----->Pretty! Simple and basic  keylogger for windows and Linux.
+					
+
 
     |----->Pretty! Simple and basic  keylogger for windows and linux.\n
     |----->             Thanks to:-					   
-
+               Techwebspot for contribution.
     |-----> YOUTUBE, THE LEGEND GOOGLE, ALL MY FRIENDS.	   
     |----->         sorry if i forgot someone.		       
     |----->    These helps to make this thing happen. ;)
